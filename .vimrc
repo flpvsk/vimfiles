@@ -1,4 +1,17 @@
-colorscheme desert
+"pathogen
+"https://github.com/tpope/vim-pathogen
+call pathogen#infect()
+
+"Solarized
+"http://ethanschoonover.com/solarized
+syntax enable
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
+
 set number 
 set hlsearch
 set cursorline
@@ -31,6 +44,7 @@ set nowritebackup
 
 set guioptions-=m
 set guioptions-=T
+set guifont=Ubuntu\ Mono\ 13
 
 " Commands for :Explore
 let g:explVertical=1    " open vertical split winow
