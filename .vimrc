@@ -60,3 +60,5 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips/"
 
 " NERD tree
 "http://www.vim.org/scripts/script.php?script_id=1658
+
+au BufNewFile,BufRead *.less set filetype=less
