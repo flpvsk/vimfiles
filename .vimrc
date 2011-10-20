@@ -47,7 +47,7 @@ set guioptions-=T
 set guifont=Ubuntu\ Mono\ 13
 
 " Commands for :Explore
-let g:explVertical=1    " open vertical split winow
+let g:explVertical=1    "  vertical split winow
 
 let g:explSplitRight=1  " Put new window to the right of the explorer
 let g:explStartRight=0  " new windows go to right of explorer window
@@ -66,4 +66,7 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " status line
 set laststatus=2
-:set statusline=%{GitBranchInfoString()}
+set statusline=%{GitBranchInfoString()}
+
+" dollar sign in the end of changing part
+set cpoptions+=$
