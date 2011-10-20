@@ -44,7 +44,7 @@ set nowritebackup
 
 set guioptions-=m
 set guioptions-=T
-set guifont=Ubuntu\ Mono\ 13
+set guifont=Ubuntu\ Mono\ 12
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
