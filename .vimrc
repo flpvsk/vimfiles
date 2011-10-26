@@ -66,7 +66,18 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " status line
 set laststatus=2
-set statusline=%{GitBranchInfoString()}
+set statusline+=%{GitBranchInfoString()}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " dollar sign in the end of changing part
 set cpoptions+=$
+
+" syntatic options
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
+
+" JS syntax check
+" http://stackoverflow.com/questions/473478/vim-jslint/5893447#5893447
