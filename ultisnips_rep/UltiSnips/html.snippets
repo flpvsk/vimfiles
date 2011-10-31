@@ -203,14 +203,8 @@ snippet meta "XHTML <meta>"
 <meta name="${1:name}" content="${2:content}"`!p x(snip)`>
 endsnippet
 
-snippet scriptsrc "XHTML <script src...>"
-<script src="$1" type="text/javascript" charset="${3:utf-8}"></script>
-endsnippet
-
-snippet script "XHTML <script>"
-<script type="text/javascript" charset="utf-8">
-	$0
-</script>
+snippet script "XHTML <script src...>"
+<script src="$1" type="text/javascript"></script>
 endsnippet
 
 snippet style "XHTML <style>"
