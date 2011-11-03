@@ -81,3 +81,7 @@ let g:syntastic_auto_loc_list=1
 
 " JS syntax check
 " http://stackoverflow.com/questions/473478/vim-jslint/5893447#5893447
+
+
+" JSON Plugin
+au! BufRead,BufNewFile *.json set filetype=json 
