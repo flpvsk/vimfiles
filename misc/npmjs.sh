@@ -72,25 +72,30 @@ fi
 
 BACK="$PWD"
 
+ret=0
 tar="${TAR}"
+if [ -z "$tar" ]; then
+  tar="${npm_config_tar}"
+fi
 if [ -z "$tar" ]; then
   tar=`which tar 2>&1`
   ret=$?
-
-  if [ $ret -eq 0 ] && [ -x "$tar" ]; then
-    echo "tar=$tar"
-    echo "version:"
-    $tar --version
-    ret=$?
-  fi
-
-  if [ $ret -eq 0 ]; then
-    (exit 0)
-  else
-    echo "No suitable tar program found."
-    exit 1
-  fi
 fi
+
+if [ $ret -eq 0 ] && [ -x "$tar" ]; then
+  echo "tar=$tar"
+  echo "version:"
+  $tar --version
+  ret=$?
+fi
+
+if [ $ret -eq 0 ]; then
+  (exit 0)
+else
+  echo "No suitable tar program found."
+  exit 1
+fi
+
 
 
 # Try to find a suitable make
@@ -121,7 +126,7 @@ fi
 if [ -x "$make" ]; then
   (exit 0)
 else
-  echo "Installing without make. This may fail." >&2
+  # echo "Installing without make. This may fail." >&2
   make=NOMAKE
 fi
 
@@ -195,7 +200,7 @@ cd "$TMP" \
       ret=$?
       if [ $ret -eq 0 ]; then
         req=`"$node" bin/read-package-json.js package.json engines.node`
-        if [ -e node_modules ]; then
+        if [ -d node_modules ]; then
           "$node" node_modules/semver/bin/semver -v "$node_version" -r "$req"
           ret=$?
         else
@@ -213,7 +218,7 @@ cd "$TMP" \
       isnpm10=0
       if [ $ret -eq 0 ]; then
         req=`"$node" bin/read-package-json.js package.json engines.node`
-        if [ -e node_modules ]; then
+        if [ -d node_modules ]; then
           if "$node" node_modules/semver/bin/semver -v "$ver" -r "1"
           then
             isnpm10=1

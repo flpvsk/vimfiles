@@ -191,7 +191,8 @@ public class ${1:`!p snip.rv = snip.basename or "untitled"`} extends ${2:TestCas
 endsnippet
 
 snippet t "test" b
-public void test${1:Name}() throws Exception`!p nl(snip)`{
+@Test
+public void ${1:Name}() throws Exception`!p nl(snip)`{
 	$0
 }
 endsnippet
