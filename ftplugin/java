@@ -1,0 +1,2 @@
+set makeprg=mvn\ compile\ -q\ -f\ .\pom.xml
+set errorformat=\[ERROR]\ %f:[%l\\,%v]\ %m
