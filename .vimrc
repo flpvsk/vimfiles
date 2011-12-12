@@ -14,7 +14,12 @@ colorscheme solarized
 
 set number 
 set hlsearch
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
 set cursorline
+
+set backspace=indent,eol,start  " backspace through everything in insert mode
 
 set encoding=utf-8 " set charset translation encoding
 set termencoding=utf-8                              " set terminal encoding
