@@ -220,6 +220,17 @@ snippet table "XHTML <table>"
 </table>
 endsnippet
 
+snippet th "th"
+<th>${0}</th>
+endsnippet
+
+snippet tr "tr"
+<tr>
+  <td>${1}</td>
+  ${0}
+</tr>
+endsnippet
+
 snippet a "Link"
 <a href="${1:http://www.${2:url.com}}"${3: target="_blank"}>${4:Anchor Text}</a>
 endsnippet
@@ -240,10 +251,6 @@ endsnippet
 
 snippet td "table cell"
 <td>$0</td>
-endsnippet
-
-snippet tr "table row"
-<tr>$0</tr>
 endsnippet
 
 snippet title "XHTML <title>"
