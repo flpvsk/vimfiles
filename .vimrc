@@ -10,7 +10,7 @@ if has('gui_running')
 else
     set background=dark
 endif
-colorscheme solarized
+colorscheme blackdust " anotherdark, solarized, bclear 
 
 set number 
 set hlsearch
