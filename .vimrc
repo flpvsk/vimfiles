@@ -6,11 +6,11 @@ call pathogen#infect()
 "http://ethanschoonover.com/solarized
 syntax enable
 if has('gui_running')
-    set background=light
+    set background=dark
 else
     set background=dark
 endif
-colorscheme solarized
+colorscheme solarized " anotherdark, solarized, bclear 
 
 set number 
 set hlsearch
@@ -30,8 +30,8 @@ set fileencodings=utf8,koi8r,cp1251,cp866,ucs-2le   "
 set nocompatible
 
 set smartindent
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 "set textwidth=78
 " перенос по словам
