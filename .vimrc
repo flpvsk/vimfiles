@@ -6,11 +6,11 @@ call pathogen#infect()
 "http://ethanschoonover.com/solarized
 syntax enable
 if has('gui_running')
-    set background=light
+    set background=dark
 else
     set background=dark
 endif
-colorscheme blackdust " anotherdark, solarized, bclear 
+colorscheme solarized " anotherdark, solarized, bclear 
 
 set number 
 set hlsearch
