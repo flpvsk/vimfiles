@@ -30,8 +30,8 @@ set fileencodings=utf8,koi8r,cp1251,cp866,ucs-2le   "
 set nocompatible
 
 set smartindent
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 "set textwidth=78
 " перенос по словам
