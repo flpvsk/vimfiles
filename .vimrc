@@ -47,8 +47,7 @@ filetype indent on
 set nobackup
 set nowritebackup
 
-set guioptions-=m
-set guioptions-=T
+set guioptions=aiA
 set guifont=Droid\ Sans\ Mono\ 10.5
 
 " Commands for :Explore
