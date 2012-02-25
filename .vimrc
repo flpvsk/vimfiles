@@ -11,7 +11,6 @@ else
     set background=dark
 endif
 colorscheme solarized " anotherdark, solarized, bclear 
-
 set number 
 set hlsearch
 set incsearch                   " incremental searching
@@ -89,3 +88,6 @@ let g:syntastic_auto_loc_list=1
 
 " JSON Plugin
 au! BufRead,BufNewFile *.json set filetype=json 
+
+" Keys
+imap jj <esc>
