@@ -2,6 +2,9 @@
 "https://github.com/tpope/vim-pathogen
 call pathogen#infect()
 
+"Don't like it ... yet
+let g:syntastic_disabled_filetypes = ['html']
+
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
@@ -71,7 +74,6 @@ au BufNewFile,BufRead *.less set filetype=less
 set laststatus=2
 set statusline+=%{GitBranchInfoString()}
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " dollar sign in the end of changing part
@@ -91,3 +93,9 @@ au! BufRead,BufNewFile *.json set filetype=json
 
 " Keys
 imap jj <esc>
+
+" Custom extension - filetype mapping
+au BufNewFile,BufRead *.eco set filetype=html.eco
+au BufNewFile,BufRead *.jeco set filetype=html.jeco
+au BufNewFile,BufRead *.mustashe set filetype=html.mustashe
+au BufNewFile,BufRead *.jquery.tmpl set filetype=html.jquery.tmpl
