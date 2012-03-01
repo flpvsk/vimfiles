@@ -67,9 +67,6 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips/"
 " NERD tree
 "http://www.vim.org/scripts/script.php?script_id=1658
 
-au BufNewFile,BufRead *.less set filetype=less
-
-
 " status line
 set laststatus=2
 set statusline+=%{GitBranchInfoString()}
@@ -88,9 +85,6 @@ let g:syntastic_auto_loc_list=1
 " http://stackoverflow.com/questions/473478/vim-jslint/5893447#5893447
 
 
-" JSON Plugin
-au! BufRead,BufNewFile *.json set filetype=json 
-
 " Keys
 imap jj <esc>
 
@@ -99,3 +93,6 @@ au BufNewFile,BufRead *.eco set filetype=html.eco
 au BufNewFile,BufRead *.jeco set filetype=html.jeco
 au BufNewFile,BufRead *.mustashe set filetype=html.mustashe
 au BufNewFile,BufRead *.jquery.tmpl set filetype=html.jquery.tmpl
+au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.md set filetype=markdown
+au! BufRead,BufNewFile *.json set filetype=json 
