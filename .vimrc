@@ -95,4 +95,5 @@ au BufNewFile,BufRead *.mustashe set filetype=html.mustashe
 au BufNewFile,BufRead *.jquery.tmpl set filetype=html.jquery.tmpl
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.snippets set filetype=snippets
 au! BufRead,BufNewFile *.json set filetype=json 
