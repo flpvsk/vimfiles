@@ -133,6 +133,9 @@ snippet input "<input>"
 <input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="$3"${4: id="${5:$2}"}`!p x(snip)`>
 endsnippet
 
+snippet button "<button>"
+<button name="${1:name}"${2: class="${3:button}"}>${4:text}</button>$0
+endsnippet
 
 snippet opt "Option"
 <option${1: value="${2:option}"}>${3:$2}</option>
@@ -213,15 +216,21 @@ snippet style "XHTML <style>"
 </style>
 endsnippet
 
-snippet table "XHTML <table>"
-<table border="${1:0}"${2: cellspacing="${3:5}" cellpadding="${4:5}"}>
-	<tr><th>${5:Header}</th></tr>
-	<tr><td>${0:Data}</td></tr>
+snippet table "<table>"
+<table>
+  <thead>
+    ${1}
+  </thead>
+  <tbody>
+    ${2}
+  </tbody>
 </table>
+${0}
 endsnippet
 
 snippet th "th"
-<th>${0}</th>
+<th>${1}</th>
+${0}
 endsnippet
 
 snippet tr "tr"
@@ -240,7 +249,7 @@ snippet p "paragraph"
 endsnippet
 
 snippet li "list item"
-<li></li>
+<li>$0</li>
 endsnippet
 
 snippet ul "unordered list"
