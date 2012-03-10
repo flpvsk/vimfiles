@@ -125,8 +125,9 @@ endsnippet
 # HTML TAGS #
 #############
 snippet input "Input with Label"
-<label for="${2:${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}}">$1</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="$5"${6: id="${7:$2}"}`!p x(snip)`>
-
+<label for="$2">${1:label}</label>
+<input name="${2:name}" type="${3:text}" value="${4:val}" ${5:class="${6:class}" }/>
+$0
 endsnippet
 
 snippet input "<input>"
@@ -181,6 +182,10 @@ snip.rv = (snip.basename or 'unnamed') + '_submit'
 
 	<p><input type="submit" value="Continue →"`!p x(snip)`></p>
 </form>
+endsnippet
+
+snippet h "header"
+<h${1:1}>${2:content}</h$1>
 endsnippet
 
 snippet h1 "XHTML <h1>"
