@@ -1,0 +1,14 @@
+snippet tag "eco tag" i
+<% ${1:tag} %>$0
+endsnippet
+
+snippet eq "print return" i
+<%= ${1} %>$0
+endsnippet
+
+snippet for "loop" i
+<% for ${1:name} in ${2:@prop}: %>
+$3
+<% end %>
+$0
+endsnippet
