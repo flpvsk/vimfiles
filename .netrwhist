@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/filipovskii_off/IdeaProjects/servicechaser'
-let g:netrw_dirhist_2='/home/filipovskii_off'
-let g:netrw_dirhist_3='/home/filipovskii_off/Projects/servicechaser/frontend/src/main/webapp'
-let g:netrw_dirhist_4='/home/filipovskii_off/Projects/trade-monitor/traffic-analyzer/web-java/src/main/webapp'
-let g:netrw_dirhist_5='/home/filipovskii_off/Projects/trade-monitor/traffic-analyzer/data-access/target/surefire-reports'
-let g:netrw_dirhist_6='/home/filipovskii_off/Projects/spine-test/node_modules'
-let g:netrw_dirhist_7='/home/filipovskii_off/Projects/spine-test/app'
-let g:netrw_dirhist_8='/home/filipovskii_off/Projects/trade-monitor/traffic-analyzer/web-java/src/main/webapp'
-let g:netrw_dirhist_9='/home/filipovskii_off/Projects/aduplicator/.git'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/filipovskii_off/Projects/virtualenv/getpython3'

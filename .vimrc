@@ -59,6 +59,7 @@ let g:explSplitRight=1  " Put new window to the right of the explorer
 let g:explStartRight=0  " new windows go to right of explorer window
 
 "set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " UltiSnips
 set runtimepath+=~/.vim/ultisnips_rep
@@ -87,6 +88,7 @@ let g:syntastic_auto_loc_list=1
 
 " Keys
 imap jj <esc>
+imap оо <esc>
 
 " Custom extension - filetype mapping
 au BufNewFile,BufRead *.eco set filetype=html.eco
