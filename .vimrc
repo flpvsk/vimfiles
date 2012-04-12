@@ -71,7 +71,7 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips/"
 
 " status line
 set laststatus=2
-set statusline+=%{GitBranchInfoString()}
+set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
 set statusline+=%#warningmsg#
 set statusline+=%*
 
