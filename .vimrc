@@ -2,6 +2,9 @@
 "https://github.com/tpope/vim-pathogen
 call pathogen#infect()
 
+"reduce syntax highlighting slowness
+let loaded_matchparen = 1
+
 "Don't like it ... yet
 let g:syntastic_disabled_filetypes = ['html']
 
