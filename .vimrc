@@ -36,7 +36,7 @@ set smartindent
 set shiftwidth=2
 set tabstop=2
 set expandtab
-"set textwidth=78
+set textwidth=78
 " перенос по словам
 set wrap
 set linebreak
