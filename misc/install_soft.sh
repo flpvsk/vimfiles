@@ -10,3 +10,4 @@ cp .jshintrc ~
 
 # HTML & CSS TIDY
 sudo aptitude install tidy csstidy
+sudo aptitude install ttf-droid
