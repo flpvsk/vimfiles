@@ -3,17 +3,17 @@
 call pathogen#infect()
 
 "Don't like it ... yet
-let g:syntastic_disabled_filetypes = ['html']
+let g:syntastic_disabled_filetypes = ['html', 'javascript']
 
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
-if has('gui_running')
-    set background=dark
-else
-    set background=dark
-endif
-colorscheme solarized " anotherdark, solarized, bclear 
+" if has('gui_running')
+"    set background=dark
+"else
+"    set background=dark
+"endif
+colorscheme gemcolors " anotherdark, solarized, bclear 
 set number 
 set hlsearch
 set incsearch                   " incremental searching
@@ -51,7 +51,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Droid\ Sans\ Mono\ 10.5
+set guifont=Ubuntu\ Mono\ 12
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
@@ -60,7 +60,7 @@ let g:explSplitRight=1  " Put new window to the right of the explorer
 let g:explStartRight=0  " new windows go to right of explorer window
 
 " BREAKS ULTISNIPS!
-"set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 "set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " UltiSnips
