@@ -13,11 +13,6 @@ endglobal
 ############
 # Doctypes #
 ############
-snippet doctype "HTML5"
-<!DOCTYPE html>
-
-endsnippet
-
 snippet doctype "DocType XHTML 1.0 Strict" b
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -42,6 +37,10 @@ snippet doctype "HTML - 4.0 Transitional (doctype)" b
 
 endsnippet
 
+snippet doctype "HTML - 5.0 (doctype)" b
+<!DOCTYPE html>
+
+endsnippet
 
 #############
 # Shortcuts #
@@ -125,18 +124,14 @@ endsnippet
 # HTML TAGS #
 #############
 snippet input "Input with Label"
-<label for="$2">${1:label}</label>
-<input name="${2:name}" type="${3:text}" value="${4:val}" ${5:class="${6:class}" }/>
-$0
+<label for="${2:${1/[[:alpha:]]+|( )/(?1:_:\L$0)/g}}">$1</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="$5"${6: id="${7:$2}"}`!p x(snip)`>
+
 endsnippet
 
-snippet input "<input>"
+snippet input "XHTML   <input>"
 <input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="$3"${4: id="${5:$2}"}`!p x(snip)`>
 endsnippet
 
-snippet button "<button>"
-<button name="${1:name}"${2: class="${3:button}"}>${4:text}</button>$0
-endsnippet
 
 snippet opt "Option"
 <option${1: value="${2:option}"}>${3:$2}</option>
@@ -172,8 +167,8 @@ snip.rv = snip.fn and 'Hallo' or 'Nothin'
 endsnippet
 
 snippet div "XHTML <div>"
-<div${1: class="${2:name}"}>
-	$0
+<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+   $0
 </div>
 endsnippet
 
@@ -185,10 +180,6 @@ snip.rv = (snip.basename or 'unnamed') + '_submit'
 
 	<p><input type="submit" value="Continue →"`!p x(snip)`></p>
 </form>
-endsnippet
-
-snippet h "header"
-<h${1:1}>${2:content}</h$1>
 endsnippet
 
 snippet h1 "XHTML <h1>"
@@ -211,8 +202,14 @@ snippet meta "XHTML <meta>"
 <meta name="${1:name}" content="${2:content}"`!p x(snip)`>
 endsnippet
 
-snippet script "XHTML <script src...>"
-<script src="$1" type="text/javascript"></script>
+snippet scriptsrc "XHTML <script src...>"
+<script src="$1" type="text/javascript" charset="${3:utf-8}"></script>
+endsnippet
+
+snippet script "XHTML <script>"
+<script type="text/javascript" charset="utf-8">
+	$0
+</script>
 endsnippet
 
 snippet style "XHTML <style>"
@@ -221,28 +218,11 @@ snippet style "XHTML <style>"
 </style>
 endsnippet
 
-snippet table "<table>"
-<table>
-  <thead>
-    ${1}
-  </thead>
-  <tbody>
-    ${2}
-  </tbody>
+snippet table "XHTML <table>"
+<table border="${1:0}"${2: cellspacing="${3:5}" cellpadding="${4:5}"}>
+	<tr><th>${5:Header}</th></tr>
+	<tr><td>${0:Data}</td></tr>
 </table>
-${0}
-endsnippet
-
-snippet th "th"
-<th>${1}</th>
-${0}
-endsnippet
-
-snippet tr "tr"
-<tr>
-  <td>${1}</td>
-  ${0}
-</tr>
 endsnippet
 
 snippet a "Link"
@@ -254,7 +234,7 @@ snippet p "paragraph"
 endsnippet
 
 snippet li "list item"
-<li>$0</li>
+<li></li>
 endsnippet
 
 snippet ul "unordered list"
@@ -265,6 +245,10 @@ endsnippet
 
 snippet td "table cell"
 <td>$0</td>
+endsnippet
+
+snippet tr "table row"
+<tr>$0</tr>
 endsnippet
 
 snippet title "XHTML <title>"
@@ -293,4 +277,21 @@ snippet movie "Embed QT movie (movie)" b
 </object>
 endsnippet
 
+snippet html5 "HTML5 Template"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${1}</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <header>
+        ${2}
+    </header>
+    <footer>
+        ${4}
+    </footer>
+</body>
+</html>
+endsnippet
 # vim:ft=snippets:

@@ -33,24 +33,24 @@ case $1:
 $0
 endsnippet
 
-snippet ca "catch"
+snippet ca "catch" b
 catch (${1:Exception} ${2:e})`!p nl(snip)`{
 	$0
 }
 endsnippet
 
-snippet cl "class" 
+snippet cl "class" b
 class ${1:`!p
 snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements ${5:Interface} }{
 	$0
 }
 endsnippet
 
-snippet cos "constant string"
+snippet cos "constant string" b
 static public final String ${1:var} = "$2";$0
 endsnippet
 
-snippet co "constant"
+snippet co "constant" b
 static public final ${1:String} ${2:var} = $3;$0
 endsnippet
 
@@ -59,7 +59,7 @@ default:
 	$0
 endsnippet
 
-snippet elif "else if"
+snippet elif "else if" b
 else if ($1)`!p nl(snip)`{
 	$0
 }
@@ -71,7 +71,7 @@ else`!p nl(snip)`{
 }
 endsnippet
 
-snippet fi "final"
+snippet fi "final" b
 final 
 endsnippet
 
@@ -94,8 +94,7 @@ if ($1)`!p nl(snip)`{
 endsnippet
 
 snippet imt "import junit_framework_TestCase;"  b
-import org.junit.Test;
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 $0
 endsnippet
 
@@ -103,7 +102,7 @@ snippet im "import"  b
 import 
 endsnippet
 
-snippet in "interface"
+snippet in "interface" b
 interface ${1:`!p snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }{
 	$0
 }
@@ -135,7 +134,7 @@ public static void main(String[] args)`!p nl(snip)`{
 }
 endsnippet
 
-snippet m "method"
+snippet m "method" b
 ${1:void} ${2:method}($3) ${4:throws $5 }{
 	$0
 }
@@ -191,19 +190,12 @@ public class ${1:`!p snip.rv = snip.basename or "untitled"`} extends ${2:TestCas
 endsnippet
 
 snippet t "test" b
-@Test
-public void ${1:feature}() throws Exception`!p nl(snip)`{
+public void test${1:Name}() throws Exception`!p nl(snip)`{
 	$0
 }
 endsnippet
 
-snippet tr "try"
-try {
-  $1
-} $0
-endsnippet
-
-snippet th "throw"
+snippet th "throw" b
 throw $0
 endsnippet
 
@@ -215,12 +207,6 @@ snippet wh "while" b
 while ($1)`!p nl(snip)`{
 	$0
 }
-endsnippet
-
-snippet /* "comment" b
-/**
-  * $0
-  */
 endsnippet
 
 # vim:ft=snippets:
