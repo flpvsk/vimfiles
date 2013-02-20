@@ -5,6 +5,9 @@ call pathogen#infect()
 "Don't like it ... yet
 let g:syntastic_disabled_filetypes = ['html', 'javascript']
 
+"use os clipboard for everything
+set clipboard=unnamed
+
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
@@ -13,7 +16,8 @@ syntax enable
 "else
 "    set background=dark
 "endif
-colorscheme gemcolors " anotherdark, solarized, bclear 
+colorscheme solarized " anotherdark, solarized, bclear 
+set background=dark
 set number 
 set hlsearch
 set incsearch                   " incremental searching
