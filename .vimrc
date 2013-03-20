@@ -2,11 +2,14 @@
 "https://github.com/tpope/vim-pathogen
 call pathogen#infect()
 
+"save undo history
+"tell it to use an undo file
+set undofile
+"set a directory to store the undo history
+set undodir=~/.vimundo/
+
 "Don't like it ... yet
 let g:syntastic_disabled_filetypes = ['html', 'javascript']
-
-"use os clipboard for everything
-set clipboard=unnamed
 
 "Solarized
 "http://ethanschoonover.com/solarized
