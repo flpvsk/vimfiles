@@ -14,11 +14,6 @@ let g:syntastic_disabled_filetypes = ['html', 'javascript']
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
-" if has('gui_running')
-"    set background=dark
-"else
-"    set background=dark
-"endif
 colorscheme solarized " anotherdark, solarized, bclear 
 set background=dark
 set number 
@@ -58,7 +53,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Ubuntu\ Mono\ 12
+set guifont=Droid\ Sans\ Mono:h14
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
@@ -107,4 +102,5 @@ au BufNewFile,BufRead *.jquery.tmpl set filetype=html.jquery.tmpl
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.snippets set filetype=snippets
+au BufNewFile,BufRead *.js set filetype=javascript
 au! BufRead,BufNewFile *.json set filetype=json 
