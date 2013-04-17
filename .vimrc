@@ -104,3 +104,6 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufRead *.js set filetype=javascript
 au! BufRead,BufNewFile *.json set filetype=json 
+
+" Don't show .pyc files in NERDTree
+let NERDTreeIgnore = ['\.pyc$']
