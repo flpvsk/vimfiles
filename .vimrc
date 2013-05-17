@@ -1,6 +1,7 @@
 "pathogen
 "https://github.com/tpope/vim-pathogen
 call pathogen#infect()
+filetype off
 
 "save undo history
 "tell it to use an undo file
@@ -15,7 +16,13 @@ let g:syntastic_disabled_filetypes = ['html', 'javascript']
 "http://ethanschoonover.com/solarized
 syntax enable
 colorscheme solarized " anotherdark, solarized, bclear 
-set background=dark
+
+if has("gui_running")
+  set background=light
+else
+  set background=dark
+endif
+
 set number 
 set hlsearch
 set incsearch                   " incremental searching
@@ -53,7 +60,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Droid\ Sans\ Mono:h14
+set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
@@ -72,11 +79,14 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips/"
 " NERD tree
 "http://www.vim.org/scripts/script.php?script_id=1658
 
-" status line
+" status line (POWERLINE)
 set laststatus=2
-set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
-set statusline+=%#warningmsg#
-set statusline+=%*
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:Powerline_theme='short'
+let g:Powerline_colorscheme='solarized16_dark'
+"set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
+"set statusline+=%#warningmsg#
+"set statusline+=%*
 
 " dollar sign in the end of changing part
 set cpoptions+=$
