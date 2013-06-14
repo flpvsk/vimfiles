@@ -15,15 +15,15 @@ let g:syntastic_disabled_filetypes = ['html', 'javascript']
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
-colorscheme solarized " anotherdark, solarized, bclear 
+colorscheme solarized " anotherdark, solarized, bclear
 
 if has("gui_running")
   set background=light
 else
-  set background=dark
+  set background=light
 endif
 
-set number 
+set number
 set hlsearch
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
@@ -38,7 +38,7 @@ set termencoding=utf-8                              " set terminal encoding
 set fileencoding=utf-8                              " set save encoding
 set fileencodings=utf8,koi8r,cp1251,cp866,ucs-2le   "
 
-"set keymap=russian-jcukenwin 
+"set keymap=russian-jcukenwin
 set nocompatible
 
 set smartindent
@@ -113,7 +113,17 @@ au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufRead *.js set filetype=javascript
-au! BufRead,BufNewFile *.json set filetype=json 
+au! BufRead,BufNewFile *.json set filetype=json
 
 " Don't show .pyc files in NERDTree
 let NERDTreeIgnore = ['\.pyc$']
+
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+" Automatically clean trailing whitespaces on save
+autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
