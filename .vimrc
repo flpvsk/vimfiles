@@ -1,7 +1,7 @@
 "pathogen
 "https://github.com/tpope/vim-pathogen
+filetype plugin off
 call pathogen#infect()
-filetype off
 
 "save undo history
 "tell it to use an undo file
@@ -18,9 +18,9 @@ syntax enable
 colorscheme solarized " anotherdark, solarized, bclear
 
 if has("gui_running")
-  set background=light
+  set background=dark
 else
-  set background=light
+  set background=dark
 endif
 
 set number
@@ -45,7 +45,7 @@ set smartindent
 set shiftwidth=2
 set tabstop=2
 set expandtab
-set textwidth=78
+set textwidth=76
 " перенос по словам
 set wrap
 set linebreak
