@@ -1,1 +1,1 @@
-/home/filipovskii_off/.vim/ultisnips_rep/ftdetect/snippets.vim
+../ultisnips_rep/ftdetect/snippets.vim
