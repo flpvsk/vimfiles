@@ -9,6 +9,8 @@ set undofile
 "set a directory to store the undo history
 set undodir=~/.vimundo/
 
+set hidden
+
 "Don't like it ... yet
 let g:syntastic_disabled_filetypes = ['html', 'javascript']
 
