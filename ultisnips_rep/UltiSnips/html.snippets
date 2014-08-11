@@ -133,6 +133,10 @@ snippet tt "Any tag inline"
 <${1:div}>${0}</${1/\s.*$//}>
 endsnippet
 
+snippet ttt "Void tag"
+<${1:input} ${0}>
+endsnippet
+
 snippet c "Close tag"
 </${1}>$0
 endsnippet
@@ -185,7 +189,7 @@ snip.rv = snip.fn and 'Hallo' or 'Nothin'
 endsnippet
 
 snippet div "XHTML <div>"
-<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
    $0
 </div>
 endsnippet
@@ -276,7 +280,7 @@ endsnippet
 snippet fieldset "Fieldset"
 <fieldset id="${1/[\w\d]+|( )/(?1:_:\L$0\E)/g}" ${2:class="${3:}"}>
 	<legend>$1</legend>
-	
+
 	$0
 </fieldset>
 endsnippet

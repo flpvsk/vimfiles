@@ -80,6 +80,7 @@ elseif exists("b:current_syntax")
 endif
 
 setlocal tabstop=4
+setlocal shiftwidth=4
 setlocal textwidth=79
 if exists("python_highlight_all") && python_highlight_all != 0
   " Not override previously set options

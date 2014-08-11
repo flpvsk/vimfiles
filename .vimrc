@@ -71,7 +71,7 @@ let g:explSplitRight=1  " Put new window to the right of the explorer
 let g:explStartRight=0  " new windows go to right of explorer window
 
 " BREAKS ULTISNIPS!
-"set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 "set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " UltiSnips
@@ -86,9 +86,11 @@ set laststatus=2
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_theme='short'
 let g:Powerline_colorscheme='solarized16_dark'
-"set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
-"set statusline+=%#warningmsg#
-"set statusline+=%*
+set statusline +=%1*%4v\ %*
+"set statusline +=%2*0x%04B\ %*
+set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
+set statusline+=%#warningmsg#
+set statusline+=%*
 
 " dollar sign in the end of changing part
 set cpoptions+=$
@@ -104,7 +106,6 @@ let g:syntastic_auto_loc_list=1
 
 " Keys
 imap jj <esc>
-imap оо <esc>
 
 " Custom extension - filetype mapping
 au BufNewFile,BufRead *.eco set filetype=html.eco
@@ -129,3 +130,8 @@ endfun
 
 " Automatically clean trailing whitespaces on save
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
+
+
+"Compile snippets of LiveScript in visual mode with c"
+au BufNewFile,BufReadPost Slakefile,*.ls vmap c <ESC>:'<,'>LiveScriptCompile<CR>
+au BufNewFile,BufReadPost Slakefile,*.ls map c :LiveScriptCompile<CR>

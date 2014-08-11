@@ -34,3 +34,15 @@
 [submodule "bundle/vim-solarized-powerline"]
 	path = bundle/vim-solarized-powerline
 	url = git@github.com:stephenmckinney/vim-solarized-powerline.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = http://github.com/mattn/emmet-vim.git
+[submodule "bundle/vim-ls"]
+	path = bundle/vim-ls
+	url = git@github.com:gkz/vim-ls.git
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = https://github.com/wting/rust.vim.git
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch.git
