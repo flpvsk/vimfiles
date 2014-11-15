@@ -46,3 +46,18 @@
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
+[submodule "bundle/vim-stylus"]
+	path = bundle/vim-stylus
+	url = git://github.com/wavded/vim-stylus.git
+[submodule "bundle/vim-javascript"]
+	path = bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git@github.com:guns/vim-clojure-static.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = git@github.com:kien/rainbow_parentheses.vim.git

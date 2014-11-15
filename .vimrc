@@ -62,7 +62,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
+set guifont=Inconsolata\ LGC:h14
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
@@ -74,9 +74,9 @@ let g:explStartRight=0  " new windows go to right of explorer window
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 "set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
-" UltiSnips
-set runtimepath+=~/.vim/ultisnips_rep
-let g:UltiSnipsSnippetsDir="~/.vim/ultisnips_rep/UltiSnips/"
+let g:user_emmet_expandabbr_key = '<C-Space>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " NERD tree
 "http://www.vim.org/scripts/script.php?script_id=1658
@@ -135,3 +135,8 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 "Compile snippets of LiveScript in visual mode with c"
 au BufNewFile,BufReadPost Slakefile,*.ls vmap c <ESC>:'<,'>LiveScriptCompile<CR>
 au BufNewFile,BufReadPost Slakefile,*.ls map c :LiveScriptCompile<CR>
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
