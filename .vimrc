@@ -20,9 +20,9 @@ syntax enable
 colorscheme solarized " anotherdark, solarized, bclear
 
 if has("gui_running")
-  set background=dark
+  set background=light
 else
-  set background=dark
+  set background=light
 endif
 
 set number
@@ -62,7 +62,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Inconsolata\ LGC:h14
+set guifont=Inconsolata\ LGC\ for\ Powerline:h14
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
