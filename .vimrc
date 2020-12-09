@@ -1,7 +1,12 @@
-"pathogen
-"https://github.com/tpope/vim-pathogen
-filetype plugin off
-call pathogen#infect()
+let g:NERDTreeNodeDelimiter = "\x07"
+let g:NERDTreeGlyphReadOnly = "RO"
+
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+Plug 'luochen1990/rainbow'
+call plug#end()
 
 "save undo history
 "tell it to use an undo file
@@ -11,18 +16,17 @@ set undodir=~/.vimundo/
 
 set hidden
 
-"Don't like it ... yet
-let g:syntastic_disabled_filetypes = ['html', 'javascript']
-
 "Solarized
 "http://ethanschoonover.com/solarized
 syntax enable
 colorscheme solarized " anotherdark, solarized, bclear
 
 if has("gui_running")
-  set background=light
+  set background=dark
+  set guifont=Fira\ Code\ Regular:h14
+  set antialias
 else
-  set background=light
+  set background=dark
 endif
 
 set number
@@ -43,11 +47,13 @@ set fileencodings=utf8,koi8r,cp1251,cp866,ucs-2le   "
 "set keymap=russian-jcukenwin
 set nocompatible
 
+set smarttab
 set smartindent
 set shiftwidth=2
 set tabstop=2
 set expandtab
-set textwidth=74
+set textwidth=60
+
 " перенос по словам
 set wrap
 set linebreak
@@ -62,7 +68,7 @@ set nobackup
 set nowritebackup
 
 set guioptions=aiA
-set guifont=Inconsolata\ LGC\ for\ Powerline:h14
+" set guifont=Inconsolata\ LGC\ for\ Powerline:h14
 
 " Commands for :Explore
 let g:explVertical=1    "  vertical split winow
@@ -80,25 +86,21 @@ autocmd FileType html,css EmmetInstall
 
 " NERD tree
 "http://www.vim.org/scripts/script.php?script_id=1658
+let NERDTreeShowHidden=1
 
 " status line (POWERLINE)
-set laststatus=2
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_theme='short'
-let g:Powerline_colorscheme='solarized16_dark'
-set statusline +=%1*%4v\ %*
+" set laststatus=2
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" let g:Powerline_theme='short'
+" let g:Powerline_colorscheme='solarized16_dark'
+" set statusline +=%1*%4v\ %*
 "set statusline +=%2*0x%04B\ %*
-set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
-set statusline+=%#warningmsg#
-set statusline+=%*
+" set statusline+=%{GitBranchInfoString()}\ [\%l][\%c]
+" set statusline+=%#warningmsg#
+" set statusline+=%*
 
 " dollar sign in the end of changing part
 set cpoptions+=$
-
-" syntatic options
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_auto_loc_list=1
 
 " JS syntax check
 " http://stackoverflow.com/questions/473478/vim-jslint/5893447#5893447
@@ -136,7 +138,5 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 au BufNewFile,BufReadPost Slakefile,*.ls vmap c <ESC>:'<,'>LiveScriptCompile<CR>
 au BufNewFile,BufReadPost Slakefile,*.ls map c :LiveScriptCompile<CR>
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+let g:rainbow_active = 1
+
